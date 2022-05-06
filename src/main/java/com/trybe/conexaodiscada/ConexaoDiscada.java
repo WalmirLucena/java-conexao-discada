@@ -14,6 +14,13 @@ public class ConexaoDiscada {
    */
   public static void main(String[] args) {
     // Seu código aqui
+    boolean atende;
+    int tentativas = 0;
+
+    do {
+      atende = conectou();
+      tentativas++;
+    } while (atende == false && tentativas < 3);
   }
 
   // Chame esta função escrevendo `conectou()`
